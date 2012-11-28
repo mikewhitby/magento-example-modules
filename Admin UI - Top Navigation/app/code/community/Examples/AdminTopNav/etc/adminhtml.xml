@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Examples
+ *
+ * PHP Version 5
+ *
+ * @category  Examples
+ * @package   Examples_AdminTopNav
+ * @author    Mike Whitby <me@mikewhitby.co.uk>
+ * @copyright Copyright (c) 2012 Mike Whitby (http://www.mikewhitby.co.uk)
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      N/A
+ */
+-->
+
+<!--
+    this file gets automatically included by magento into the global
+    configuration.
+
+    the contents of this file used to have to be in config.xml but it was moved
+    out of there because it got too large, so now magento checks to see if this
+    file exists for all modules then merges it if it does.
+
+    the root node gets discarded, and the contents of it get merged into the
+    config at the config/adminhtml path
+-->
+<config>
+    <menu>
+        <examples_admintopnav translate="title" module="examples_admintopnav">
+            <title>Admin Top Nav Example</title>
+            <sort_order>100</sort_order>
+            <children>
+                <sales translate="title" module="examples_admintopnav">
+                    <title>Link To Sales</title>
+                    <sort_order>10</sort_order> <!-- using a sort order which skips by 10 is useful -->
+                    <action>adminhtml/sales_order</action>
+                </sales>
+                <children translate="title" module="examples_admintopnav">
+                    <title>Item With Children</title>
+                    <sort_order>20</sort_order>
+                    <children>
+                        <nonexistent_thing translate="title" module="examples_admintopnav">
+                            <title>Link To Something Nonexistent</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/nonexistent_thing</action>
+                        </nonexistent_thing>
+                    </children>
+                </children>
+            </children>
+        </examples_admintopnav>
+    </menu>
+</config>

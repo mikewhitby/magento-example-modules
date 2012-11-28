@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Examples
+ *
+ * PHP Version 5
+ *
+ * @category  Examples
+ * @package   Examples_AdminGridAndForm
+ * @author    Mike Whitby <me@mikewhitby.co.uk>
+ * @copyright Copyright (c) 2012 Mike Whitby (http://www.mikewhitby.co.uk)
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      N/A
+ */
+-->
+<config>
+    <menu>
+        <examples_admingridandform translate="title" module="examples_admingridandform">
+            <title>Admin Grid Example</title>
+            <sort_order>100</sort_order>
+            <children>
+                <thing translate="title" module="examples_admingridandform">
+                    <title>Things</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/examples_admingridandform_thing</action>
+                </thing>
+            </children>
+        </examples_admingridandform>
+    </menu>
+</config>

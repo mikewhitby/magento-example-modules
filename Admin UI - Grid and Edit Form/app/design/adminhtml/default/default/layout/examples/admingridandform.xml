@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Examples
+ *
+ * PHP Version 5
+ *
+ * @category  Examples
+ * @package   Examples_AdminGridAndForm
+ * @author    Mike Whitby <me@mikewhitby.co.uk>
+ * @copyright Copyright (c) 2012 Mike Whitby (http://www.mikewhitby.co.uk)
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      N/A
+ */
+-->
+<layout>
+    <!--
+        this provides the layout for the grid. normally layout handles in magento
+        have much more content than this however the admin works in such a way
+        that the layout handles only deal with the high level parents, so here
+        we are creating a grid container and that is it - the grid container
+        class code then creates the grid as a child of itself, and the grid
+        creates headers, rows, columns etc - basically layout is done
+        programmatically rather than via xml
+    -->
+    <adminhtml_examples_admingridandform_thing_index>
+        <reference name="content">
+            <block type="examples_admingridandform/adminhtml_thing" name="thing" />
+        </reference>
+    </adminhtml_examples_admingridandform_thing_index>
+    
+    <!--
+        this is for the edit form, same deal as the layout handle above
+    -->
+    <adminhtml_examples_admingridandform_thing_edit>
+        <reference name="content">
+            <block type="examples_admingridandform/adminhtml_thing_edit" name="thing.edit" />
+        </reference>
+    </adminhtml_examples_admingridandform_thing_edit>
+</layout>
